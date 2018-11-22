@@ -18,7 +18,6 @@ enum SwiftToolchain: String, RawRepresentable, Codable {
   case swift4_2 = "4.2-RELEASE"
 }
 
-
 struct Run: Codable {
   let toolchain: SwiftToolchain
   let value: String

@@ -65,6 +65,7 @@ extension ViewController: WebSocketDelegate {
       let result = try JSONDecoder().decode(Result.self, from: data)
       resultTextView.text = result.output.value
       resultTextView.textColor = result.output.annotations.isEmpty ? .white : .red
+      syntaxTextView.contentTextView.resignFirstResponder()
     } catch {
       print(error)
     }

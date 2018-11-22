@@ -73,10 +73,10 @@
 		63890ED321A5C3E0004DF8A2 /* Native Swift Editor */ = {
 			isa = PBXGroup;
 			children = (
-				631930B321A74493005F6789 /* Result.swift */,
 				63890ED421A5C3E0004DF8A2 /* AppDelegate.swift */,
-				63890ED621A5C3E0004DF8A2 /* ViewController.swift */,
+				631930B321A74493005F6789 /* Result.swift */,
 				63EB879821A5C8620065F225 /* Compilation.swift */,
+				63890ED621A5C3E0004DF8A2 /* ViewController.swift */,
 				63890ED821A5C3E0004DF8A2 /* Main.storyboard */,
 				63890EDB21A5C3E1004DF8A2 /* Assets.xcassets */,
 				63890EDD21A5C3E1004DF8A2 /* LaunchScreen.storyboard */,
