@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FD8F7A3005D23676975DEFA /* Pods_Native_Swift_Editor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A88F7428688E876243BB8409 /* Pods_Native_Swift_Editor.framework */; };
-		631930B421A74493005F6789 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631930B321A74493005F6789 /* Result.swift */; };
-		631930B621A74EBB005F6789 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631930B521A74EBB005F6789 /* Extensions.swift */; };
-		63890ED521A5C3E0004DF8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63890ED421A5C3E0004DF8A2 /* AppDelegate.swift */; };
-		63890ED721A5C3E0004DF8A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63890ED621A5C3E0004DF8A2 /* ViewController.swift */; };
-		63890EDA21A5C3E0004DF8A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63890ED821A5C3E0004DF8A2 /* Main.storyboard */; };
-		63890EDC21A5C3E1004DF8A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63890EDB21A5C3E1004DF8A2 /* Assets.xcassets */; };
-		63890EDF21A5C3E1004DF8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63890EDD21A5C3E1004DF8A2 /* LaunchScreen.storyboard */; };
-		63EB879921A5C8620065F225 /* Compilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EB879821A5C8620065F225 /* Compilation.swift */; };
+		638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F021A75B3E00031B54 /* ViewController.swift */; };
+		638D30FC21A75B3E00031B54 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F121A75B3E00031B54 /* Result.swift */; };
+		638D30FD21A75B3E00031B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F221A75B3E00031B54 /* Assets.xcassets */; };
+		638D310021A75B3E00031B54 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F721A75B3E00031B54 /* Extensions.swift */; };
+		638D310121A75B3E00031B54 /* Compilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F821A75B3E00031B54 /* Compilation.swift */; };
+		638D310221A75B3E00031B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F921A75B3E00031B54 /* AppDelegate.swift */; };
+		638D310421A75CF400031B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F321A75B3E00031B54 /* LaunchScreen.storyboard */; };
+		638D310521A75CF400031B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F521A75B3E00031B54 /* Main.storyboard */; };
+		B2C902F9387764EC75ACF64D /* Pods_Xcode_mini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		631930B321A74493005F6789 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		631930B521A74EBB005F6789 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		63890ED121A5C3E0004DF8A2 /* Native Swift Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Native Swift Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63890ED421A5C3E0004DF8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63890ED621A5C3E0004DF8A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		63890ED921A5C3E0004DF8A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		63890EDB21A5C3E1004DF8A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		63890EDE21A5C3E1004DF8A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		63890EE021A5C3E1004DF8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63EB879821A5C8620065F225 /* Compilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compilation.swift; sourceTree = "<group>"; };
-		7E6B2B01E068552097C81442 /* Pods-Native Swift Editor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Native Swift Editor.release.xcconfig"; path = "Target Support Files/Pods-Native Swift Editor/Pods-Native Swift Editor.release.xcconfig"; sourceTree = "<group>"; };
-		A5904DBEBB42A8F7FAF5A7CA /* Pods-Native Swift Editor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Native Swift Editor.debug.xcconfig"; path = "Target Support Files/Pods-Native Swift Editor/Pods-Native Swift Editor.debug.xcconfig"; sourceTree = "<group>"; };
-		A88F7428688E876243BB8409 /* Pods_Native_Swift_Editor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Native_Swift_Editor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63890ED121A5C3E0004DF8A2 /* Xcode mini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xcode mini.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		638D30F021A75B3E00031B54 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		638D30F121A75B3E00031B54 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		638D30F221A75B3E00031B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		638D30F421A75B3E00031B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		638D30F621A75B3E00031B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		638D30F721A75B3E00031B54 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		638D30F821A75B3E00031B54 /* Compilation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compilation.swift; sourceTree = "<group>"; };
+		638D30F921A75B3E00031B54 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		638D30FA21A75B3E00031B54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xcode mini.debug.xcconfig"; path = "Target Support Files/Pods-Xcode mini/Pods-Xcode mini.debug.xcconfig"; sourceTree = "<group>"; };
+		A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xcode_mini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xcode mini.release.xcconfig"; path = "Target Support Files/Pods-Xcode mini/Pods-Xcode mini.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD8F7A3005D23676975DEFA /* Pods_Native_Swift_Editor.framework in Frameworks */,
+				B2C902F9387764EC75ACF64D /* Pods_Xcode_mini.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +49,7 @@
 		3BE84DDD80AEAC4699BC7B44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A88F7428688E876243BB8409 /* Pods_Native_Swift_Editor.framework */,
+				A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 		63890EC821A5C3E0004DF8A2 = {
 			isa = PBXGroup;
 			children = (
-				63890ED321A5C3E0004DF8A2 /* Native Swift Editor */,
+				638D30EF21A75B3E00031B54 /* Xcode mini */,
 				63890ED221A5C3E0004DF8A2 /* Products */,
 				CCD621A5BA9D9A70DCA9464B /* Pods */,
 				3BE84DDD80AEAC4699BC7B44 /* Frameworks */,
@@ -67,32 +67,32 @@
 		63890ED221A5C3E0004DF8A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63890ED121A5C3E0004DF8A2 /* Native Swift Editor.app */,
+				63890ED121A5C3E0004DF8A2 /* Xcode mini.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		63890ED321A5C3E0004DF8A2 /* Native Swift Editor */ = {
+		638D30EF21A75B3E00031B54 /* Xcode mini */ = {
 			isa = PBXGroup;
 			children = (
-				63890ED421A5C3E0004DF8A2 /* AppDelegate.swift */,
-				631930B321A74493005F6789 /* Result.swift */,
-				631930B521A74EBB005F6789 /* Extensions.swift */,
-				63EB879821A5C8620065F225 /* Compilation.swift */,
-				63890ED621A5C3E0004DF8A2 /* ViewController.swift */,
-				63890ED821A5C3E0004DF8A2 /* Main.storyboard */,
-				63890EDB21A5C3E1004DF8A2 /* Assets.xcassets */,
-				63890EDD21A5C3E1004DF8A2 /* LaunchScreen.storyboard */,
-				63890EE021A5C3E1004DF8A2 /* Info.plist */,
+				638D30F921A75B3E00031B54 /* AppDelegate.swift */,
+				638D30F021A75B3E00031B54 /* ViewController.swift */,
+				638D30F121A75B3E00031B54 /* Result.swift */,
+				638D30F221A75B3E00031B54 /* Assets.xcassets */,
+				638D30F321A75B3E00031B54 /* LaunchScreen.storyboard */,
+				638D30F521A75B3E00031B54 /* Main.storyboard */,
+				638D30F721A75B3E00031B54 /* Extensions.swift */,
+				638D30F821A75B3E00031B54 /* Compilation.swift */,
+				638D30FA21A75B3E00031B54 /* Info.plist */,
 			);
-			path = "Native Swift Editor";
+			path = "Xcode mini";
 			sourceTree = "<group>";
 		};
 		CCD621A5BA9D9A70DCA9464B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5904DBEBB42A8F7FAF5A7CA /* Pods-Native Swift Editor.debug.xcconfig */,
-				7E6B2B01E068552097C81442 /* Pods-Native Swift Editor.release.xcconfig */,
+				640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */,
+				FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		63890ED021A5C3E0004DF8A2 /* Native Swift Editor */ = {
+		63890ED021A5C3E0004DF8A2 /* Xcode mini */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63890EE321A5C3E1004DF8A2 /* Build configuration list for PBXNativeTarget "Native Swift Editor" */;
+			buildConfigurationList = 63890EE321A5C3E1004DF8A2 /* Build configuration list for PBXNativeTarget "Xcode mini" */;
 			buildPhases = (
 				17C92E5835B6FA4E88F308E5 /* [CP] Check Pods Manifest.lock */,
 				63890ECD21A5C3E0004DF8A2 /* Sources */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = "Native Swift Editor";
-			productName = "Native Swift Editor";
-			productReference = 63890ED121A5C3E0004DF8A2 /* Native Swift Editor.app */;
+			name = "Xcode mini";
+			productName = "Xcode mini";
+			productReference = 63890ED121A5C3E0004DF8A2 /* Xcode mini.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63890ECC21A5C3E0004DF8A2 /* Build configuration list for PBXProject "Native Swift Editor" */;
+			buildConfigurationList = 63890ECC21A5C3E0004DF8A2 /* Build configuration list for PBXProject "Xcode mini" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63890ED021A5C3E0004DF8A2 /* Native Swift Editor */,
+				63890ED021A5C3E0004DF8A2 /* Xcode mini */,
 			);
 		};
 /* End PBXProject section */
@@ -157,9 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63890EDF21A5C3E1004DF8A2 /* LaunchScreen.storyboard in Resources */,
-				63890EDC21A5C3E1004DF8A2 /* Assets.xcassets in Resources */,
-				63890EDA21A5C3E0004DF8A2 /* Main.storyboard in Resources */,
+				638D310421A75CF400031B54 /* LaunchScreen.storyboard in Resources */,
+				638D310521A75CF400031B54 /* Main.storyboard in Resources */,
+				638D30FD21A75B3E00031B54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +181,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Native Swift Editor-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Xcode mini-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -196,7 +196,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Native Swift Editor/Pods-Native Swift Editor-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Xcode mini/Pods-Xcode mini-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SavannaKit/SavannaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SourceEditor/SourceEditor.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
@@ -211,7 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Native Swift Editor/Pods-Native Swift Editor-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xcode mini/Pods-Xcode mini-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -221,31 +221,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				631930B621A74EBB005F6789 /* Extensions.swift in Sources */,
-				63EB879921A5C8620065F225 /* Compilation.swift in Sources */,
-				63890ED721A5C3E0004DF8A2 /* ViewController.swift in Sources */,
-				631930B421A74493005F6789 /* Result.swift in Sources */,
-				63890ED521A5C3E0004DF8A2 /* AppDelegate.swift in Sources */,
+				638D30FC21A75B3E00031B54 /* Result.swift in Sources */,
+				638D310021A75B3E00031B54 /* Extensions.swift in Sources */,
+				638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */,
+				638D310221A75B3E00031B54 /* AppDelegate.swift in Sources */,
+				638D310121A75B3E00031B54 /* Compilation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		63890ED821A5C3E0004DF8A2 /* Main.storyboard */ = {
+		638D30F321A75B3E00031B54 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				63890ED921A5C3E0004DF8A2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		63890EDD21A5C3E1004DF8A2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63890EDE21A5C3E1004DF8A2 /* Base */,
+				638D30F421A75B3E00031B54 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		638D30F521A75B3E00031B54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				638D30F621A75B3E00031B54 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -369,18 +369,18 @@
 		};
 		63890EE421A5C3E1004DF8A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5904DBEBB42A8F7FAF5A7CA /* Pods-Native Swift Editor.debug.xcconfig */;
+			baseConfigurationReference = 640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
-				INFOPLIST_FILE = "Native Swift Editor/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Xcode mini/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Native-Swift-Editor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Xcode-mini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,18 +389,18 @@
 		};
 		63890EE521A5C3E1004DF8A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E6B2B01E068552097C81442 /* Pods-Native Swift Editor.release.xcconfig */;
+			baseConfigurationReference = FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
-				INFOPLIST_FILE = "Native Swift Editor/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Xcode mini/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Native-Swift-Editor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Xcode-mini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -410,7 +410,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63890ECC21A5C3E0004DF8A2 /* Build configuration list for PBXProject "Native Swift Editor" */ = {
+		63890ECC21A5C3E0004DF8A2 /* Build configuration list for PBXProject "Xcode mini" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63890EE121A5C3E1004DF8A2 /* Debug */,
@@ -419,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63890EE321A5C3E1004DF8A2 /* Build configuration list for PBXNativeTarget "Native Swift Editor" */ = {
+		63890EE321A5C3E1004DF8A2 /* Build configuration list for PBXNativeTarget "Xcode mini" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63890EE421A5C3E1004DF8A2 /* Debug */,

@@ -1,6 +1,6 @@
 platform :ios, '11.0'
 
-target 'Native Swift Editor' do
+target 'Xcode mini' do
   use_frameworks!
 
   pod 'Starscream'
