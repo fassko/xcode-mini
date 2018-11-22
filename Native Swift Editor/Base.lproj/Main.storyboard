@@ -50,6 +50,11 @@ print("test")</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Xcode mini" id="9pJ-Vh-6Sx">
+                        <barButtonItem key="leftBarButtonItem" title="Swift 4.2" style="plain" id="nks-3a-6s3">
+                            <connections>
+                                <action selector="changeSwiftVersion:" destination="BYZ-38-t0r" id="959-bq-zb4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" systemItem="play" id="bt7-Ie-2Kb">
                             <connections>
                                 <action selector="compile:" destination="BYZ-38-t0r" id="Fo0-eP-iBn"/>
@@ -59,6 +64,7 @@ print("test")</string>
                     <connections>
                         <outlet property="compileIcon" destination="bt7-Ie-2Kb" id="xCB-yW-o5T"/>
                         <outlet property="resultTextView" destination="kAf-SS-m4H" id="Rl3-lf-HA1"/>
+                        <outlet property="swiftVersionButton" destination="nks-3a-6s3" id="lWa-bA-dsJ"/>
                         <outlet property="syntaxTextView" destination="PBc-LR-fT4" id="hMs-8z-h3F"/>
                     </connections>
                 </viewController>

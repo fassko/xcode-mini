@@ -13,28 +13,40 @@ import Starscream
 
 class ViewController: UIViewController {
   
-  let lexer = SwiftLexer()
-  
-  let socket = WebSocket(url: URL(string: "ws://online.swiftplayground.run/terminal")!)
-  
   @IBOutlet weak var syntaxTextView: SyntaxTextView!
   @IBOutlet weak var resultTextView: TextView!
   @IBOutlet weak var compileIcon: UIBarButtonItem!
+  @IBOutlet weak var swiftVersionButton: UIBarButtonItem!
+  
+  private let lexer = SwiftLexer()
+  
+  private let socket = WebSocket(url: URL(string: "ws://online.swiftplayground.run/terminal")!)
+  
+  private var swiftVersion: SwiftToolchain! = SwiftToolchain.latestVersion {
+    didSet {
+      swiftVersionButton.title = "Swift \(String(describing: swiftVersion.description))"
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    socket.connect()
     socket.delegate = self
+    socket.connect()
     
     syntaxTextView.theme = DefaultSourceCodeTheme()
     syntaxTextView.delegate = self
   }
-  
+}
+
+extension ViewController {
   @IBAction func compile(_ sender: Any) {
+    
+    resultTextView.clear()
+    
     guard socket.isConnected else { return }
     
-    let run = Run(toolchain: .swift4_2, value: syntaxTextView.text)
+    let run = Run(toolchain: swiftVersion, value: syntaxTextView.text)
     let compilation = Compilation(run: run)
     
     do {
@@ -46,6 +58,21 @@ class ViewController: UIViewController {
     } catch {
       print("Can't encode")
     }
+  }
+  
+  @IBAction func changeSwiftVersion(_ sender: UIBarButtonItem) {
+    let swiftVersionAlert = UIAlertController(title: nil,
+                                              message: "Choose Swift toolchain version",
+                                              preferredStyle: .actionSheet)
+    
+    let alertActions = SwiftToolchain.allCases.map { version in
+      return UIAlertAction(title: version.description, style: .default) { [weak self] _ in
+        self?.swiftVersion = version
+      }
+    }
+    swiftVersionAlert.addActions(alertActions)
+    
+    present(swiftVersionAlert, animated: true, completion: nil)
   }
 }
 
@@ -71,9 +98,7 @@ extension ViewController: WebSocketDelegate {
     }
   }
   
-  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-    print(data)
-  }
+  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {}
 }
 
 
