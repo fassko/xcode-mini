@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63026F702445D8F70096F852 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 63026F6F2445D8F70096F852 /* SwiftPackageProductDependency */; };
+		63026F732445DE780096F852 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 63026F722445DE780096F852 /* SwiftPackageProductDependency */; };
 		638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F021A75B3E00031B54 /* ViewController.swift */; };
 		638D30FC21A75B3E00031B54 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F121A75B3E00031B54 /* Result.swift */; };
 		638D30FD21A75B3E00031B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F221A75B3E00031B54 /* Assets.xcassets */; };
@@ -15,7 +17,6 @@
 		638D310221A75B3E00031B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F921A75B3E00031B54 /* AppDelegate.swift */; };
 		638D310421A75CF400031B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F321A75B3E00031B54 /* LaunchScreen.storyboard */; };
 		638D310521A75CF400031B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F521A75B3E00031B54 /* Main.storyboard */; };
-		B2C902F9387764EC75ACF64D /* Pods_Xcode_mini.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +30,6 @@
 		638D30F821A75B3E00031B54 /* Compilation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compilation.swift; sourceTree = "<group>"; };
 		638D30F921A75B3E00031B54 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638D30FA21A75B3E00031B54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xcode mini.debug.xcconfig"; path = "Target Support Files/Pods-Xcode mini/Pods-Xcode mini.debug.xcconfig"; sourceTree = "<group>"; };
-		A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xcode_mini.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xcode mini.release.xcconfig"; path = "Target Support Files/Pods-Xcode mini/Pods-Xcode mini.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,28 +37,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C902F9387764EC75ACF64D /* Pods_Xcode_mini.framework in Frameworks */,
+				63026F702445D8F70096F852 /* BuildFile in Frameworks */,
+				63026F732445DE780096F852 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3BE84DDD80AEAC4699BC7B44 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A62093C6BB55EAE1A57174FB /* Pods_Xcode_mini.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		63890EC821A5C3E0004DF8A2 = {
 			isa = PBXGroup;
 			children = (
 				638D30EF21A75B3E00031B54 /* Xcode mini */,
 				63890ED221A5C3E0004DF8A2 /* Products */,
 				CCD621A5BA9D9A70DCA9464B /* Pods */,
-				3BE84DDD80AEAC4699BC7B44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,8 +81,6 @@
 		CCD621A5BA9D9A70DCA9464B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */,
-				FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -104,17 +92,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63890EE321A5C3E1004DF8A2 /* Build configuration list for PBXNativeTarget "Xcode mini" */;
 			buildPhases = (
-				17C92E5835B6FA4E88F308E5 /* [CP] Check Pods Manifest.lock */,
 				63890ECD21A5C3E0004DF8A2 /* Sources */,
 				63890ECE21A5C3E0004DF8A2 /* Frameworks */,
 				63890ECF21A5C3E0004DF8A2 /* Resources */,
-				51502E5DCFA04CE017DC5CC5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Xcode mini";
+			packageProductDependencies = (
+				63026F6F2445D8F70096F852 /* SwiftPackageProductDependency */,
+				63026F722445DE780096F852 /* SwiftPackageProductDependency */,
+			);
 			productName = "Xcode mini";
 			productReference = 63890ED121A5C3E0004DF8A2 /* Xcode mini.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 63890EC821A5C3E0004DF8A2;
+			packageReferences = (
+				63026F6E2445D8F70096F852 /* RemoteSwiftPackageReference */,
+				63026F712445DE780096F852 /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = 63890ED221A5C3E0004DF8A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,57 +158,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		17C92E5835B6FA4E88F308E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Xcode mini-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51502E5DCFA04CE017DC5CC5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Xcode mini/Pods-Xcode mini-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SavannaKit/SavannaKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SourceEditor/SourceEditor.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SavannaKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SourceEditor.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xcode mini/Pods-Xcode mini-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63890ECD21A5C3E0004DF8A2 /* Sources */ = {
@@ -302,13 +245,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -357,52 +301,51 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		63890EE421A5C3E1004DF8A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 640CF8D2866DB0664CB6A17C /* Pods-Xcode mini.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = "$(SRCROOT)/Xcode mini/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Xcode-mini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		63890EE521A5C3E1004DF8A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBD1BECB36B38C6EC90CA9D4 /* Pods-Xcode mini.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3SGNZQGS68;
 				INFOPLIST_FILE = "$(SRCROOT)/Xcode mini/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fassko.Xcode-mini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -429,6 +372,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63026F6E2445D8F70096F852 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Sourceful";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		63026F712445DE780096F852 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63026F6F2445D8F70096F852 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63026F6E2445D8F70096F852 /* RemoteSwiftPackageReference */;
+			productName = Sourceful;
+		};
+		63026F722445DE780096F852 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63026F712445DE780096F852 /* RemoteSwiftPackageReference */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63890EC921A5C3E0004DF8A2 /* Project object */;
 }

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import SavannaKit
-import SourceEditor
+
 import Starscream
+import Sourceful
 
 class ViewController: UIViewController {
   
@@ -20,7 +20,8 @@ class ViewController: UIViewController {
   
   private let lexer = SwiftLexer()
   
-  private let socket = WebSocket(url: URL(string: "ws://online.swiftplayground.run/terminal")!)
+  
+  private let socket = WebSocket(request: URLRequest(url: URL(string: "ws://online.swiftplayground.run/terminal")!))
   
   private var swiftVersion: SwiftToolchain! = SwiftToolchain.latestVersion {
     didSet {
@@ -44,7 +45,7 @@ extension ViewController {
     
     resultTextView.clear()
     
-    guard socket.isConnected else { return }
+//    guard socket.isConnected else { return }
     
     let run = Run(toolchain: swiftVersion, value: syntaxTextView.text)
     let compilation = Compilation(run: run)
@@ -77,28 +78,24 @@ extension ViewController {
 }
 
 extension ViewController: WebSocketDelegate {
-  func websocketDidConnect(socket: WebSocketClient) {
-    compileIcon.isEnabled = true
-  }
-  
-  func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-    print("disconnected", error.debugDescription)
-    compileIcon.isEnabled = false
-  }
-  
-  func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-    do {
-      guard let data = text.data(using: .utf8) else { return }
-      let result = try JSONDecoder().decode(Result.self, from: data)
-      resultTextView.text = result.output.value
-      resultTextView.textColor = result.output.annotations.isEmpty ? .white : .red
-      syntaxTextView.contentTextView.resignFirstResponder()
-    } catch {
-      print(error)
+  func didReceive(event: WebSocketEvent, client: WebSocket) {
+    switch event {
+    case .connected:
+      compileIcon.isEnabled = true
+    case .text(let text):
+      do {
+        guard let data = text.data(using: .utf8) else { return }
+        let result = try JSONDecoder().decode(Result.self, from: data)
+        resultTextView.text = result.output.value
+        resultTextView.textColor = result.output.annotations.isEmpty ? .white : .red
+        syntaxTextView.contentTextView.resignFirstResponder()
+      } catch {
+        print(error)
+      }
+    default:
+      print("something else")
     }
   }
-  
-  func websocketDidReceiveData(socket: WebSocketClient, data: Data) {}
 }
 
 

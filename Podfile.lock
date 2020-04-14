@@ -1,33 +1,16 @@
 PODS:
-  - SavannaKit (0.9.0)
-  - SourceEditor (1.0.1):
-    - SavannaKit (~> 0.9)
   - Starscream (3.0.6)
 
 DEPENDENCIES:
-  - SourceEditor (from `https://github.com/louisdh/source-editor.git`, branch `master`)
   - Starscream
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SavannaKit
+  https://github.com/CocoaPods/Specs.git:
     - Starscream
 
-EXTERNAL SOURCES:
-  SourceEditor:
-    :branch: master
-    :git: https://github.com/louisdh/source-editor.git
-
-CHECKOUT OPTIONS:
-  SourceEditor:
-    :commit: fd7d83470c8830c78b722b515192d50a8c39759e
-    :git: https://github.com/louisdh/source-editor.git
-
 SPEC CHECKSUMS:
-  SavannaKit: 920c240bde011900df8156200a960dad3ee5edfd
-  SourceEditor: 4d590385d642c812d08a91941a4bfc90eccf20af
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 6f0ae4c02b0493b7afe28ef1a61b45518ab0fc3f
+PODFILE CHECKSUM: 6abe5b3bdb679a256e02211f3287fd1b1b49bad2
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.9.1

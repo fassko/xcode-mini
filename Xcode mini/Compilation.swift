@@ -13,9 +13,7 @@ struct Compilation: Codable {
 }
 
 enum SwiftToolchain: String, RawRepresentable, Codable, CustomStringConvertible, CaseIterable {
-  case swift4_0_3 = "4.0.3-RELEASE"
-  case swift4_1 = "4.1.2-RELEASE"
-  case swift4_2 = "4.2-RELEASE"
+  case swift5_1 = "5.1-RELEASE"
   
   var value: String {
     return rawValue
