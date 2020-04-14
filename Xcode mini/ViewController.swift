@@ -20,6 +20,7 @@ class ViewController: UIViewController {
   
   private let lexer = SwiftLexer()
   
+  private var isConnected = false
   
   private let socket = WebSocket(request: URLRequest(url: URL(string: "ws://online.swiftplayground.run/terminal")!))
   
@@ -45,7 +46,7 @@ extension ViewController {
     
     resultTextView.clear()
     
-//    guard socket.isConnected else { return }
+    guard isConnected else { return }
     
     let run = Run(toolchain: swiftVersion, value: syntaxTextView.text)
     let compilation = Compilation(run: run)
@@ -81,6 +82,7 @@ extension ViewController: WebSocketDelegate {
   func didReceive(event: WebSocketEvent, client: WebSocket) {
     switch event {
     case .connected:
+      isConnected = true
       compileIcon.isEnabled = true
     case .text(let text):
       do {
