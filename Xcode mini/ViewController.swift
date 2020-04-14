@@ -8,7 +8,6 @@
 
 import UIKit
 
-import Starscream
 import Sourceful
 
 class ViewController: UIViewController {
@@ -22,7 +21,9 @@ class ViewController: UIViewController {
   
   private var isConnected = false
   
-  private let socket = WebSocket(request: URLRequest(url: URL(string: "ws://online.swiftplayground.run/terminal")!))
+  let webSocketQueue = OperationQueue()
+  private lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: webSocketQueue)
+  private lazy var webSocketTask = session.webSocketTask(with: URL(string: "ws://online.swiftplayground.run/terminal")!)
   
   private var swiftVersion: SwiftToolchain! = SwiftToolchain.latestVersion {
     didSet {
@@ -30,14 +31,58 @@ class ViewController: UIViewController {
     }
   }
   
+  fileprivate func receiveMessage() {
+    webSocketTask.receive { [weak self] result in
+      switch result {
+      case .success(let message):
+        switch message {
+        case .string(let text):
+          DispatchQueue.main.async {
+            do {
+              guard let data = text.data(using: .utf8) else { return }
+              let result = try JSONDecoder().decode(Result.self, from: data)
+              self?.resultTextView.text = result.output.value
+              self?.resultTextView.textColor = result.output.annotations.isEmpty ? .white : .red
+              self?.syntaxTextView.contentTextView.resignFirstResponder()
+            } catch {
+              print(error)
+            }
+          }
+        case .data(let data):
+          print("Received data: \(data)")
+        @unknown default:
+          fatalError("Unknown case")
+        }
+      case .failure(let error):
+        print("Error in receiving message: \(error)")
+      }
+      
+      self?.receiveMessage()
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    socket.delegate = self
-    socket.connect()
+    webSocketTask.resume()
     
     syntaxTextView.theme = DefaultSourceCodeTheme()
     syntaxTextView.delegate = self
+  }
+}
+
+extension ViewController: URLSessionWebSocketDelegate {
+  func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
+    receiveMessage()
+    
+    DispatchQueue.main.async { [weak self] in
+      self?.isConnected = true
+      self?.compileIcon.isEnabled = true
+    }
+  }
+  
+  func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
+    print("close")
   }
 }
 
@@ -56,7 +101,11 @@ extension ViewController {
       guard let jsonString = String(data: jsonData, encoding: .utf8) else {
         return
       }
-      socket.write(string: jsonString)
+      webSocketTask.send(.string(jsonString)) { error in
+        if let error = error {
+          print("Can't send to compile \(error)")
+        }
+      }
     } catch {
       print("Can't encode")
     }
@@ -78,36 +127,7 @@ extension ViewController {
   }
 }
 
-extension ViewController: WebSocketDelegate {
-  func didReceive(event: WebSocketEvent, client: WebSocket) {
-    switch event {
-    case .connected:
-      isConnected = true
-      compileIcon.isEnabled = true
-    case .text(let text):
-      do {
-        guard let data = text.data(using: .utf8) else { return }
-        let result = try JSONDecoder().decode(Result.self, from: data)
-        resultTextView.text = result.output.value
-        resultTextView.textColor = result.output.annotations.isEmpty ? .white : .red
-        syntaxTextView.contentTextView.resignFirstResponder()
-      } catch {
-        print(error)
-      }
-    default:
-      print("something else")
-    }
-  }
-}
-
-
 extension ViewController: SyntaxTextViewDelegate {
-  func didChangeText(_ syntaxTextView: SyntaxTextView) {
-  }
-  
-  func didChangeSelectedRange(_ syntaxTextView: SyntaxTextView, selectedRange: NSRange) {
-  }
-  
   func lexerForSource(_ source: String) -> Lexer {
     return lexer
   }
