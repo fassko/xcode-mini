@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Starscream
 
-class WebSocketManager: NSObject, URLSessionWebSocketDelegate {
-  private var webSocketTask: URLSessionWebSocketTask?
+class WebSocketManager: NSObject {
+  private var websocket: WebSocket?
   private let delegate: WebSocketManagerDelegate?
   
   init(delegate: WebSocketManagerDelegate) {
@@ -17,61 +18,37 @@ class WebSocketManager: NSObject, URLSessionWebSocketDelegate {
   }
   
   func connect() {
-    let webSocketQueue = OperationQueue()
-    let session = URLSession(configuration: .default, delegate: self, delegateQueue: webSocketQueue)
-    
-    webSocketTask = session.webSocketTask(with: URL(string: "ws://online.swiftplayground.run/terminal")!)
-    webSocketTask?.resume()
+    let request = URLRequest(url: URL(string: "ws://online.swiftplayground.run/terminal")!)
+    websocket = WebSocket(request: request)
+    websocket?.delegate = self
+    websocket?.connect()
   }
   
   func send(text: String, _ completion: ((Error?) -> Void)? = nil) {
-    webSocketTask?.send(.string(text)) { error in
-      if let error = error {
-        completion?(error)
-      } else {
-        completion?(nil)
-      }
+    websocket?.write(string: text) {
+      completion?(nil)
     }
   }
-  
-  func receiveMessage() {
-    webSocketTask?.receive { [weak self] result in
-      switch result {
-      case .success(let message):
-        switch message {
-        case .string(let text):
-          do {
-            guard let data = text.data(using: .utf8) else { return }
-            let result = try JSONDecoder().decode(Result.self, from: data)
-            
-            DispatchQueue.main.async {
-              self?.delegate?.didReceive(text: result.output.value, annotations: result.output.annotations)
-            }
-          } catch {
-            print(error)
-          }
-        case .data(let data):
-          print("Received data: \(data)")
-        @unknown default:
-          fatalError("Unknown case")
+}
+
+extension WebSocketManager: WebSocketDelegate {
+  func didReceive(event: WebSocketEvent, client: WebSocket) {
+    switch event {
+    case .connected:
+      delegate?.didConnect()
+    case .text(let text):
+      do {
+        guard let data = text.data(using: .utf8) else { return }
+        let result = try JSONDecoder().decode(Result.self, from: data)
+        
+        DispatchQueue.main.async { [weak self] in
+          self?.delegate?.didReceive(text: result.output.value, annotations: result.output.annotations)
         }
-      case .failure(let error):
-        print("Error in receiving message: \(error)")
+      } catch {
+        print(error)
       }
-      
-      self?.receiveMessage()
+    default:
+      print("Not implemented \(event)")
     }
-  }
-  
-  func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
-    receiveMessage()
-    
-    DispatchQueue.main.async { [weak self] in
-      self?.delegate?.didConnect()
-    }
-  }
-  
-  func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
-    print("WebSocket closed")
   }
 }

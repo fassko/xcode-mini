@@ -16,6 +16,7 @@
 		6378A933244705EC00438A17 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A932244705EC00438A17 /* Run.swift */; };
 		6378A9352447188E00438A17 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A9342447188E00438A17 /* WebSocketManager.swift */; };
 		6378A938244718A400438A17 /* WebSocketManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A937244718A400438A17 /* WebSocketManagerDelegate.swift */; };
+		6378A93C244720D500438A17 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 6378A93B244720D500438A17 /* Starscream */; };
 		638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F021A75B3E00031B54 /* ViewController.swift */; };
 		638D30FC21A75B3E00031B54 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F121A75B3E00031B54 /* Result.swift */; };
 		638D30FD21A75B3E00031B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F221A75B3E00031B54 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63026F702445D8F70096F852 /* Sourceful in Frameworks */,
+				6378A93C244720D500438A17 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,7 @@
 			name = "Xcode mini";
 			packageProductDependencies = (
 				63026F6F2445D8F70096F852 /* Sourceful */,
+				6378A93B244720D500438A17 /* Starscream */,
 			);
 			productName = "Xcode mini";
 			productReference = 63890ED121A5C3E0004DF8A2 /* Xcode mini.app */;
@@ -196,6 +199,7 @@
 			mainGroup = 63890EC821A5C3E0004DF8A2;
 			packageReferences = (
 				63026F6E2445D8F70096F852 /* XCRemoteSwiftPackageReference "Sourceful" */,
+				6378A93A244720D500438A17 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 63890ED221A5C3E0004DF8A2 /* Products */;
 			projectDirPath = "";
@@ -450,6 +454,14 @@
 				minimumVersion = 0.3.0;
 			};
 		};
+		6378A93A244720D500438A17 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -457,6 +469,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63026F6E2445D8F70096F852 /* XCRemoteSwiftPackageReference "Sourceful" */;
 			productName = Sourceful;
+		};
+		6378A93B244720D500438A17 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6378A93A244720D500438A17 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
