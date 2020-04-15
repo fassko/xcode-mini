@@ -26,7 +26,7 @@ print("test")</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kAf-SS-m4H">
-                                <rect key="frame" x="0.0" y="311.5" width="375" height="311.5"/>
+                                <rect key="frame" x="16" y="327.5" width="343" height="279.5"/>
                                 <color key="backgroundColor" red="0.15686274509803921" green="0.16862745098039217" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -36,25 +36,25 @@ print("test")</string>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.16862745100000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PBc-LR-fT4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="1mQ-vy-fLu"/>
-                            <constraint firstItem="kAf-SS-m4H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GZm-35-SEs"/>
-                            <constraint firstItem="kAf-SS-m4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K3O-Vc-HR1"/>
-                            <constraint firstItem="kAf-SS-m4H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lkb-Is-Ld7"/>
+                            <constraint firstItem="kAf-SS-m4H" firstAttribute="top" secondItem="PBc-LR-fT4" secondAttribute="bottom" constant="16" id="7Ue-3W-k41"/>
+                            <constraint firstItem="kAf-SS-m4H" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-16" id="GZm-35-SEs"/>
+                            <constraint firstItem="kAf-SS-m4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K3O-Vc-HR1"/>
+                            <constraint firstItem="kAf-SS-m4H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="Lkb-Is-Ld7"/>
                             <constraint firstItem="PBc-LR-fT4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Md1-GE-BXO"/>
                             <constraint firstItem="PBc-LR-fT4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mjy-sg-gPT"/>
-                            <constraint firstItem="kAf-SS-m4H" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.5" id="cig-oR-GcP"/>
                             <constraint firstItem="PBc-LR-fT4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rCJ-Jc-F7R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Xcode mini" id="9pJ-Vh-6Sx">
-                        <barButtonItem key="leftBarButtonItem" title="Swift 5.1" style="plain" id="nks-3a-6s3">
+                        <barButtonItem key="leftBarButtonItem" title="Swift 5.1" id="nks-3a-6s3">
                             <connections>
                                 <action selector="changeSwiftVersion:" destination="BYZ-38-t0r" id="959-bq-zb4"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="plain" systemItem="play" id="bt7-Ie-2Kb">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="play" id="bt7-Ie-2Kb">
                             <connections>
-                                <action selector="compile:" destination="BYZ-38-t0r" id="Fo0-eP-iBn"/>
+                                <action selector="compile:" destination="BYZ-38-t0r" id="v29-Fi-VqC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

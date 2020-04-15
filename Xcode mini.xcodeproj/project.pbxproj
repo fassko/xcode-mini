@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		63026F702445D8F70096F852 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = 63026F6F2445D8F70096F852 /* Sourceful */; };
+		6378A9262447056700438A17 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A9252447056700438A17 /* Output.swift */; };
+		6378A9282447057500438A17 /* AnnotationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A9272447057500438A17 /* AnnotationType.swift */; };
+		6378A92A2447058300438A17 /* AnnotationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A9292447058300438A17 /* AnnotationLocation.swift */; };
+		6378A92C2447059900438A17 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A92B2447059900438A17 /* Annotation.swift */; };
+		6378A931244705E000438A17 /* SwiftToolchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A930244705E000438A17 /* SwiftToolchain.swift */; };
+		6378A933244705EC00438A17 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A932244705EC00438A17 /* Run.swift */; };
+		6378A9352447188E00438A17 /* WebSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A9342447188E00438A17 /* WebSocketManager.swift */; };
+		6378A938244718A400438A17 /* WebSocketManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378A937244718A400438A17 /* WebSocketManagerDelegate.swift */; };
 		638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F021A75B3E00031B54 /* ViewController.swift */; };
 		638D30FC21A75B3E00031B54 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30F121A75B3E00031B54 /* Result.swift */; };
 		638D30FD21A75B3E00031B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638D30F221A75B3E00031B54 /* Assets.xcassets */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6378A9252447056700438A17 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		6378A9272447057500438A17 /* AnnotationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationType.swift; sourceTree = "<group>"; };
+		6378A9292447058300438A17 /* AnnotationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationLocation.swift; sourceTree = "<group>"; };
+		6378A92B2447059900438A17 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		6378A930244705E000438A17 /* SwiftToolchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftToolchain.swift; sourceTree = "<group>"; };
+		6378A932244705EC00438A17 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		6378A9342447188E00438A17 /* WebSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManager.swift; sourceTree = "<group>"; };
+		6378A937244718A400438A17 /* WebSocketManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketManagerDelegate.swift; sourceTree = "<group>"; };
 		63890ED121A5C3E0004DF8A2 /* Xcode mini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xcode mini.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		638D30F021A75B3E00031B54 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		638D30F121A75B3E00031B54 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -43,6 +59,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6378A9242447055900438A17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6378A92F244705D600438A17 /* Compilation */,
+				6378A92E244705CF00438A17 /* Result */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6378A92D244705A900438A17 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				638D30F721A75B3E00031B54 /* Extensions.swift */,
+				6378A9242447055900438A17 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6378A92E244705CF00438A17 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				638D30F121A75B3E00031B54 /* Result.swift */,
+				6378A9252447056700438A17 /* Output.swift */,
+				6378A9272447057500438A17 /* AnnotationType.swift */,
+				6378A9292447058300438A17 /* AnnotationLocation.swift */,
+				6378A92B2447059900438A17 /* Annotation.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		6378A92F244705D600438A17 /* Compilation */ = {
+			isa = PBXGroup;
+			children = (
+				638D30F821A75B3E00031B54 /* Compilation.swift */,
+				6378A930244705E000438A17 /* SwiftToolchain.swift */,
+				6378A932244705EC00438A17 /* Run.swift */,
+			);
+			path = Compilation;
+			sourceTree = "<group>";
+		};
+		6378A939244718AF00438A17 /* WebSockets */ = {
+			isa = PBXGroup;
+			children = (
+				6378A937244718A400438A17 /* WebSocketManagerDelegate.swift */,
+				6378A9342447188E00438A17 /* WebSocketManager.swift */,
+			);
+			path = WebSockets;
+			sourceTree = "<group>";
+		};
 		63890EC821A5C3E0004DF8A2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +129,12 @@
 			isa = PBXGroup;
 			children = (
 				638D30F921A75B3E00031B54 /* AppDelegate.swift */,
+				6378A92D244705A900438A17 /* Core */,
 				638D30F021A75B3E00031B54 /* ViewController.swift */,
-				638D30F121A75B3E00031B54 /* Result.swift */,
+				6378A939244718AF00438A17 /* WebSockets */,
 				638D30F221A75B3E00031B54 /* Assets.xcassets */,
 				638D30F321A75B3E00031B54 /* LaunchScreen.storyboard */,
 				638D30F521A75B3E00031B54 /* Main.storyboard */,
-				638D30F721A75B3E00031B54 /* Extensions.swift */,
-				638D30F821A75B3E00031B54 /* Compilation.swift */,
 				638D30FA21A75B3E00031B54 /* Info.plist */,
 			);
 			path = "Xcode mini";
@@ -160,11 +224,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6378A9282447057500438A17 /* AnnotationType.swift in Sources */,
 				638D30FC21A75B3E00031B54 /* Result.swift in Sources */,
 				638D310021A75B3E00031B54 /* Extensions.swift in Sources */,
+				6378A938244718A400438A17 /* WebSocketManagerDelegate.swift in Sources */,
 				638D30FB21A75B3E00031B54 /* ViewController.swift in Sources */,
 				638D310221A75B3E00031B54 /* AppDelegate.swift in Sources */,
+				6378A931244705E000438A17 /* SwiftToolchain.swift in Sources */,
+				6378A9262447056700438A17 /* Output.swift in Sources */,
 				638D310121A75B3E00031B54 /* Compilation.swift in Sources */,
+				6378A92C2447059900438A17 /* Annotation.swift in Sources */,
+				6378A933244705EC00438A17 /* Run.swift in Sources */,
+				6378A92A2447058300438A17 /* AnnotationLocation.swift in Sources */,
+				6378A9352447188E00438A17 /* WebSocketManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

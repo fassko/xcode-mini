@@ -1,16 +1,12 @@
 //
-//  Compilation.swift
-//  Native Swift Editor
+//  SwiftToolchain.swift
+//  Xcode mini
 //
-//  Created by Kristaps Grinbergs on 21/11/2018.
-//  Copyright © 2018 fassko. All rights reserved.
+//  Created by Kristaps Grinbergs on 15/04/2020.
+//  Copyright © 2020 fassko. All rights reserved.
 //
 
 import Foundation
-
-struct Compilation: Codable {
-  let run: Run
-}
 
 enum SwiftToolchain: String, RawRepresentable, Codable, CustomStringConvertible, CaseIterable {
   case swift5_1 = "5.1-RELEASE"
@@ -27,9 +23,4 @@ enum SwiftToolchain: String, RawRepresentable, Codable, CustomStringConvertible,
   static var latestVersion: SwiftToolchain {
     return SwiftToolchain.allCases.last!
   }
-}
-
-struct Run: Codable {
-  let toolchain: SwiftToolchain
-  let value: String
 }
